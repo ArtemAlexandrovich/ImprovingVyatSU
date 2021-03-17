@@ -496,3 +496,10 @@ function format_num(str) {
 function showApplyPage(){
     alert("Заглушка)))");
 }
+
+function uncheckAllRadio(name){
+    let radioElem = document.getElementsByName(name);
+    for (let i = 0; i<radioElem.length;i++){
+        radioElem[i].checked=false;
+    }
+}

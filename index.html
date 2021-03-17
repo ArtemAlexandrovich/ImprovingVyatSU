@@ -36,6 +36,20 @@
                         <label class="form_label">А где вода в куллере у коворкинга?</label>
                         <label class="form_label_notify">Формулировка проблемы</label>
                     </div>
+                    <div class="radioInputBox">
+                        <p><input type="radio" name="solveField">Вещественное обеспечение(парты, доски, мел)</p>
+
+                    </div>
+                    <div class="radioInputBox">
+                        <p><input type="radio" name="solveField">Учебные вопросы(расписание, нагрузка)</p>
+                    </div>
+                    <div class="radioInputBox">
+                        <p><input type="radio" name="solveField">Финансы и меры поддержки членов ВятГУ(стипендия,
+                            зарплата)</p>
+                    </div>
+                    <div id="buttonAntiRadio">
+                        <p class="build_butt" onclick="uncheckAllRadio('solveField')">Не уточнять</p>
+                    </div>
                     <div class="input_box">
                         <input class="form_input font_fill" name="ToEmail" id="ToEmail" type="text"
                                placeholder=" "  inputmode="tel">
