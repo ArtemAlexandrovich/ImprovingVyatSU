@@ -30,85 +30,31 @@
                     <div class="form_title">
                         <h2>Какой у Вас вопрос?</h2>
                     </div>
-                    <!--onkeyup="this.value = this.value.replace (/[^0-9,]/g, '')"-->
                     <div class="input_box">
-                        <input type="text" onkeyup="format_price(event)" name="full_price"
-                               id="full_price" class="form_input font_fill" placeholder=" " inputmode="numeric">
-                        <label class="form_label">Краткое описание проблемы</label>
-                        <label class="form_label_notify">Обязательно для отправки заявки</label>
-                    </div>
-                    <!--<div class="input_box">
-                        <input class="form_input font_fill" onkeyup="maxYears(event)" name="Years"
-                               id="Years" type="text" placeholder=" " inputmode="numeric">
-                        <label class="form_label">Срок кредита в годах</label>
-                        <label class="form_label_notify">Обязательно для построения графика</label>
+                        <input class="form_input font_fill" name="ApplyInput" id="ApplyInput" type="text"
+                               placeholder=" " inputmode="tel">
+                        <label class="form_label">А где вода в куллере у коворкинга?</label>
+                        <label class="form_label_notify">Формулировка проблемы</label>
                     </div>
                     <div class="input_box">
-                        <input class="form_input font_fill " onkeyup="maxPercents(event)" name="Percents"
-                               id="Percents" type="text" placeholder=" " maxlength="7" inputmode="numeric">
-                        <label class="form_label">Процентная ставка, % в год</label>
-                        <label class="form_label_notify">Обязательно для построения графика</label>
-                    </div>
-                    <div class="input_box">
-                        <input class="form_input font_fill " onkeyup="fullName(event)" name="FullName"
-                               id="FullName" type="text" placeholder=" ">
-                        <label class="form_label">ФИО</label>
-                        <label class="form_label_notify">Обязательно при отправке</label>
-                    </div>
-                    <div class="input_box">
-                        <input class="form_input font_fill " onkeyup="telephone(event)" name="Phone"
-                               id="Phone" type="text" placeholder=" " inputmode="tel">
-                        <label class="form_label">Телефон</label>
-                        <label class="form_label_notify">Обязательно при отправке</label>
-                    </div>-->
-                    <div class="input_box">
-                        <input class="form_input font_fill" name="ToEmail" id="ToEmail" type="text" placeholder=" ">
+                        <input class="form_input font_fill" name="ToEmail" id="ToEmail" type="text"
+                               placeholder=" "  inputmode="tel">
                         <label class="form_label">Почта(для разработчиков)</label>
                         <label class="form_label_notify">maa.ofp@yandex.ru - по умолчанию</label>
                     </div>
                 </div>
-                <!--<div class="border_nice">
-
-
-                    <div class="form_title">
-                        <h2>Результаты рассчета</h2>
-                    </div>
-                    <div class="output_box">
-                        <label class="form_out_label">Ежемесячный платёж</label>
-                        <input id="MonthPay" class="font_fill form_out_input" type="text" name="MonthPay"
-                               id="MonthPay" readonly="readonly" value="">
-                    </div>
-                    <div class="output_box">
-                        <label class="form_out_label">Сумма выплаченных процентов</label>
-                        <input id="AllProcents" class="font_fill form_out_input" type="text" name="AllPercents"
-                               id="AllPercents" readonly="readonly" value="">
-                    </div>
-                    <div class="output_box">
-                        <label class="form_out_label">Дата первого платежа</label>
-                        <input id="StartDate" class="font_fill form_out_input" type="text" name="StartDate"
-                               id="StartDate" readonly="readonly" value="">
-                    </div>
-                    <div class="output_box">
-                        <label class="form_out_label">Дата последнего платежа</label>
-                        <input id="FinishDate" class="font_fill form_out_input" type="text" name="FinishDate"
-                               id="FinishDate" readonly="readonly" value="">
-                    </div>
-
-                </div>-->
                 <div>
                     <!--                        <input type="button" value="Отправть заявку">-->
                     <div class="send_butt_over">
-
                         <div class="send_div">
                             <!--<p class="send_butt"> Отправить заявку </p>-->
                             <button type="submit" class="send_butt">Отправить заявку</button>
                             <label class="form_send_status">
-
                             </label>
                         </div>
-<!--                        <div class="send_div">
-                            <p class="build_butt" onclick="buildGraph()"> График погашения </p>
-                        </div>-->
+                        <div class="send_div">
+                            <p class="build_butt" onclick="showApplyPage()"> Заявки</p>
+                        </div>
 
                     </div>
 

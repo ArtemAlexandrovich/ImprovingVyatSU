@@ -492,3 +492,7 @@ function format_num(str) {
     }
     return retstr;
 }
+
+function showApplyPage(){
+    alert("Заглушка)))");
+}
