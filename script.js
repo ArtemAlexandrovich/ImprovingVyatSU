@@ -494,6 +494,9 @@ function format_num(str) {
 }
 
 function showApplyPage(){
+    /*
+    * делаем ленту заявок
+    * */
     alert("Заглушка)))");
 }
 
