@@ -169,6 +169,7 @@ td,th{
     color: #90aac6;
     transition: 0.3s;
     left: 0;
+    font-size: 14px;
 }
 .form_label_notify {
     font-size: 14px;
@@ -180,7 +181,7 @@ td,th{
 .form_input:focus ~ .form_label,
 .form_input:not(:placeholder-shown) ~ .form_label {
     top: -18px;
-    font-size: 12px;
+    font-size: 0px;
     color: #90aac6;
 }
 .output_box {
