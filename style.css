@@ -151,6 +151,9 @@ td,th{
      margin-bottom: 30px; 
     z-index: 2;
 }
+.radioInputBox{
+    margin: 5px;
+}
 .form_input {
     width: 100%;
      padding-bottom: 5px; 

@@ -169,32 +169,22 @@ $arr_graph = json_decode($GraphJSON);
 
 $DB = "11";// 11 - подкл и добавл, 10 - подкл не добав, 00 - отказ БД. Данные для клиента
 
-$mysql = new mysqli("a340579.mysql.mchost.ru","a340579_1","VKQVB1B5j1","a340579_1");
+$mysql = new mysqli(
+    "http://hermes.handyhost.ru:1500/ispmgr",
+    "u104108_ivtstudent",
+    "ivtstudent",
+    "u104108_ivthack"
+);
 // обработка ошибки входа
 
 if ($mysql->connect_errno) {
-    $DB = "00";// отказ БД
-//    echo $DB."0";// код в клиент 000  - ну не беда , в следующий раз
     $mysql->close();
-    
-    $filename = "PayGraph.html";
-    PayGraph_Create($filename,$arr_graph);
-
-    if (SendFileToEmail("maa.ofp@yandex.ru",$FullName,$Phone,$Sum,$Years,$Percents,$MonthPay,$AllPercents,$StartDate,$FinishDate,$filename)){
-        $stat_mes = $DB."1";// отправлено
-    }
-    else{
-        $stat_mes = $DB."0"; // не отправлено
-    }
-    
-    echo $stat_mes;// код состояния
-    
     exit();
 }
 
 
 
-$mysql->query("INSERT INTO `Vyatka_persons`(`name`,`phone`,`sum`,`years`,`percents`,`month_pay`,`all_percents`,`start_date`,`end_date`)
+$mysql->query("INSERT INTO `Applications`(`name`,`phone`,`sum`,`years`,`percents`,`month_pay`,`all_percents`,`start_date`,`end_date`)
 VALUES('$FullName','$Phone','$Sum','$Years','$Percents','$MonthPay','$AllPercents','$StartDate','$FinishDate' )");
 
 // если вставка удалась, 
@@ -274,8 +264,6 @@ else{
 //var_dump($err_mes);
 
 echo $stat_mes;// код состояния
-/*
 
-*/
 
 ?>
