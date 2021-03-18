@@ -502,4 +502,6 @@ function uncheckAllRadio(name){
     for (let i = 0; i<radioElem.length;i++){
         radioElem[i].checked=false;
     }
+
+    alert(id111.value);
 }
