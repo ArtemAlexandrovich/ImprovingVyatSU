@@ -20,7 +20,7 @@ $mysql = new mysqli(
     "u104108_ivthack"
 );
 // обработка ошибки входа
-
+echo хакатоним;
 $errMess = "000";
 if ($mysql->connect_errno) {
     $mysql->close();

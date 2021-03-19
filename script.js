@@ -493,8 +493,9 @@ function format_num(str) {
     return retstr;
 }
 
-function showApplyPage(){
-    alert("Заглушка)))");
+function showApplyPage(newURL){
+    myWin= open(newURL);
+    // alert("Заглушка)))");
 }
 
 function uncheckAllRadio(name){
@@ -503,5 +504,5 @@ function uncheckAllRadio(name){
         radioElem[i].checked=false;
     }
 
-    alert(id111.value);
+    // alert(id111.value);
 }
