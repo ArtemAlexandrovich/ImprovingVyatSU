@@ -11,27 +11,35 @@
        111 - есть доступ к базе, данные вставилиьс в таблицу,сообщение отправлено на почту
        */
 
-$ApplyInput = $_POST['ApplyInput'];
+$TaskField = $_POST['TaskField'];
+$Task = $_POST['Task'];
+$TaskCreator = $_POST['TaskCreator'];
+$CreatorsAmount = $_POST['CreatorsAmount'];
 
 $mysql = new mysqli(
-    "http://hermes.handyhost.ru:1500/ispmgr",
+    "localhost",
     "u104108_ivtstudent",
     "ivtstudent",
     "u104108_ivthack"
 );
 // обработка ошибки входа
-echo хакатоним;
+//echo хакатоним;
+
 $errMess = "000";
 if ($mysql->connect_errno) {
     $mysql->close();
-    echo $errMess;
+    echo (string)$mysql->connect_errno;
     exit();
 }
 
 $RusMessage = "Мы устали на хакатоне...";
 
-$mysql->query("INSERT INTO `TestPHP`(`testField`,`ПроверкаРусскогоЯзыка`)
-VALUES('$ApplyInput','$RusMessage' )");
+$mysql->query("INSERT INTO `Заявки`(
+                     `Область задачи`,
+                     `Описание задачи`,
+                     `Создатель задачи`,
+                     `Количество людей`)
+VALUES('$TaskField','$Task' ,'$TaskCreator','$CreatorsAmount')");
 
 
 // если вставка удалась, 

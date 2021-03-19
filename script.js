@@ -23,6 +23,8 @@ sendForm.addEventListener('submit', function (e) { /* !!! ЭТА ФУН. ОБР�
 
     const formData = new FormData(this); /*formData - объект хранящий данные формы*/
 
+    console.log(formData);
+
     countCreditWrite();
     formData.append('Payment', JSON.stringify(payment_arr));
 
