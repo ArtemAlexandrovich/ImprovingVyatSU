@@ -11,10 +11,15 @@
        111 - есть доступ к базе, данные вставилиьс в таблицу,сообщение отправлено на почту
        */
 
-$TaskField = $_POST['TaskField'];
+$TaskField = $_POST['solveField'];
 $Task = $_POST['Task'];
 $TaskCreator = $_POST['TaskCreator'];
 $CreatorsAmount = $_POST['CreatorsAmount'];
+$Material = $_POST['Material'];
+$Education = $_POST['Education'];
+$Finance = $_POST['Finance'];
+$FormData = $_POST['FormDataJSON'];
+
 
 $mysql = new mysqli(
     "localhost",
@@ -31,8 +36,15 @@ if ($mysql->connect_errno) {
     echo (string)$mysql->connect_errno;
     exit();
 }
-
+//echo "FormData = ";
+//echo $FormData;
+//echo ";";
 $RusMessage = "Мы устали на хакатоне...";
+
+if (!empty($Material)){$TaskField = $Material;}
+elseif(!empty($Education)){$TaskField = $Education;}
+elseif (!empty($Finance)){$TaskField = $Finance;}
+else{$TaskField = "";}
 
 $mysql->query("INSERT INTO `Заявки`(
                      `Область задачи`,

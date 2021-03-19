@@ -37,17 +37,20 @@
                         <label class="form_label_notify">Формулировка проблемы</label>
                     </div>
                     <div class="radioInputBox" id = "id111" name="id111">
-                        <label><input type="radio" name="solveField">Вещественное обеспечение(парты, доски, мел)</label>
+                        <input type="radio" name="solveField" id="Material">
+                        <label for="Material">Вещественное обеспечение(парты, доски, мел)</label>
                     </div>
                     <div class="radioInputBox">
-                        <label><input type="radio" name="solveField">Учебные вопросы(расписание, нагрузка)</label>
+                        <input type="radio" name="solveField" id="Education">
+                        <label for="Education">Учебные вопросы(расписание, нагрузка)</label>
                     </div>
                     <div class="radioInputBox">
-                        <label><input type="radio" name="solveField">Финансы и меры поддержки членов ВятГУ(стипендия,
-                            зарплата)</label>
+                        <input type="radio" name="solveField" id="Finance">
+                        <label for="Finance">Финансы и меры поддержки членов ВятГУ(стипендия, зарплата)</label>
                     </div>
                     <div class="radioInputBox">
-                        <label><input type="checkbox" name="Anonimno">Анонимно</label>
+                        <input type="checkbox" name="Anonimno" id="AnonimID">
+                        <label for="AnonimID">Анонимно</label>
                     </div>
                     <div id="buttonAntiRadio">
                         <p style="margin-left: auto;margin-right: auto" class="build_butt" onclick="uncheckAllRadio('solveField')">Не уточнять</p>
